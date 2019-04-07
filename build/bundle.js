@@ -8,7 +8,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 console.log(_math["default"].sumAll(50, 10));
 console.log(_math["default"].subtractAll(50, 10));
 console.log(_math["default"].multiplyAll(50, 10));
-console.log(_math["default"].divideAll(50, 10));
+console.log(_math["default"].divideAll(50, 2));
 
 },{"./math.js":2}],2:[function(require,module,exports){
 "use strict";
