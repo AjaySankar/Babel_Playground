@@ -8,3 +8,4 @@ console.log(_math["default"].sumAll(50, 10));
 console.log(_math["default"].subtractAll(50, 10));
 console.log(_math["default"].multiplyAll(50, 10));
 console.log(_math["default"].divideAll(50, 10));
+//# sourceMappingURL=app.js.map

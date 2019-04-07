@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/test.js"],"names":["displayHello","console","log"],"mappings":";;AAAA,IAAMA,YAAY,GAAG,SAAfA,YAAe,GAAM;AACzBC,EAAAA,OAAO,CAACC,GAAR,CAAY,aAAZ;AACD,CAFD;;AAGAF,YAAY","sourcesContent":["const displayHello = () => {\r\n  console.log('Hello world');\r\n};\r\ndisplayHello();"],"file":"test.js"}

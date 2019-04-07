@@ -5,3 +5,4 @@ var displayHello = function displayHello() {
 };
 
 displayHello();
+//# sourceMappingURL=test.js.map

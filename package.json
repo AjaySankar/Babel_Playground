@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "babel": "npx babel src -d build",
+    "babel": "npx babel src -d build --source-maps",
+    "build": "npm run babel && browserify.cmd .\\build\\app.js -o .\\build\\bundle.js",
     "http-serve": "http-server . -p 1010",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -28,3 +28,4 @@ var _default = {
   multiplyAll: multiplyAll
 };
 exports["default"] = _default;
+//# sourceMappingURL=math.js.map
