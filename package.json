@@ -6,6 +6,7 @@
   "scripts": {
     "babel": "npx babel src -d build --source-maps",
     "build": "npm run babel && browserify.cmd .\\build\\app.js -o .\\build\\bundle.js",
+    "browserify": "browserify .\\src\\app.js -o .\\build\\app.js -t [ babelify ]",
     "http-serve": "http-server . -p 1010",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +19,14 @@
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3"
+    "@babel/preset-env": "^7.4.3",
+    "babelify": "^10.0.0"
+  },
+  "browserify": {
+    "transform": [
+        [
+            "babelify"
+        ]
+    ]
   }
 }
