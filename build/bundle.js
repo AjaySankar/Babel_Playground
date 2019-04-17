@@ -3,14 +3,41 @@
 
 var _math = _interopRequireDefault(require("./math.js"));
 
+var _string = _interopRequireDefault(require("./string.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-console.log(_math["default"].sumAll(50, 10));
-console.log(_math["default"].subtractAll(50, 10));
-console.log(_math["default"].multiplyAll(50, 10));
-console.log(_math["default"].divideAll(50, 2));
+window.onload = function () {
+  console.log(_math["default"].sumAll(50, 10));
+  console.log(_math["default"].subtractAll(50, 10));
+  console.log(_math["default"].multiplyAll(50, 10));
+  console.log(_math["default"].divideAll(50, 2));
 
-},{"./math.js":2}],2:[function(require,module,exports){
+  var cS = _string["default"].concatenateStrings('Ajay', 'Sankar', 'Chintagunta');
+
+  console.log(cS);
+  document.getElementById('concatenate').innerText = cS;
+  var iterable = [10, 20, 30];
+
+  for (var _i = 0, _iterable = iterable; _i < _iterable.length; _i++) {
+    var value = _iterable[_i];
+    value += 1;
+    console.log(value);
+  }
+
+  var foo = {
+    a: 'foo',
+    z: 'bar',
+    m: 'baz'
+  };
+
+  for (var _i2 = 0, _Object$keys = Object.keys(foo); _i2 < _Object$keys.length; _i2++) {
+    var i = _Object$keys[_i2];
+    console.log('Hello world');
+  }
+};
+
+},{"./math.js":2,"./string.js":3}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39,6 +66,27 @@ var _default = {
   subtractAll: subtractAll,
   divideAll: divideAll,
   multiplyAll: multiplyAll
+};
+exports["default"] = _default;
+
+},{}],3:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var concatenateStrings = function concatenateStrings() {
+  for (var _len = arguments.length, strings = new Array(_len), _key = 0; _key < _len; _key++) {
+    strings[_key] = arguments[_key];
+  }
+
+  return strings.join(' ');
+};
+
+var _default = {
+  concatenateStrings: concatenateStrings
 };
 exports["default"] = _default;
 

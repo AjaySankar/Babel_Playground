@@ -1,4 +1,11 @@
 {
-  "plugins": [],
+  "plugins": [
+    "@babel/plugin-transform-arrow-functions",
+    [
+      "@babel/plugin-transform-for-of", {
+        "loose": true
+      }
+    ]
+  ],
   "presets": ["@babel/preset-env"]
 }
