@@ -1,3 +1,4 @@
+//Only use the below import in case of useBuiltIns option set to 'entry'
 //import "@babel/polyfill";
 import math from './math.js'
 import string from './string.js'
@@ -9,7 +10,10 @@ window.onload = () => {
   console.log(math.divideAll(50, 2));
   const cS =string.concatenateStrings('Ajay', 'Sankar', 'Chintagunta');
   console.log(cS);
-  document.getElementById('concatenate').innerText = cS;
+  const ele = document.getElementById('concatenate');
+  if(ele) {
+    ele.innerText = cS;
+  }
   let iterable = [10, 20, 30];
   for (let value of iterable) {
     value += 1;
