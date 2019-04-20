@@ -21,7 +21,7 @@
           "ie": "6"
         },
         "forceAllTransforms": true,
-        "useBuiltIns": "entry"
+        "useBuiltIns": "usage"
       }
     ]
   ]
