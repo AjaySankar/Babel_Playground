@@ -5,15 +5,15 @@ var _math = _interopRequireDefault(require("./math.js"));
 
 var _string = _interopRequireDefault(require("./string.js"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 window.onload = function () {
-  console.log(_math.default.sumAll(50, 10));
-  console.log(_math.default.subtractAll(50, 10));
-  console.log(_math.default.multiplyAll(50, 10));
-  console.log(_math.default.divideAll(50, 2));
+  console.log(_math["default"].sumAll(50, 10));
+  console.log(_math["default"].subtractAll(50, 10));
+  console.log(_math["default"].multiplyAll(50, 10));
+  console.log(_math["default"].divideAll(50, 2));
 
-  var cS = _string.default.concatenateStrings('Ajay', 'Sankar', 'Chintagunta');
+  var cS = _string["default"].concatenateStrings('Ajay', 'Sankar', 'Chintagunta');
 
   console.log(cS);
   document.getElementById('concatenate').innerText = cS;
