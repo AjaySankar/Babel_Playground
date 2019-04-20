@@ -12,7 +12,7 @@
       "@babel/preset-env", {
         "targets": {
           "chrome": "58",
-          "ie": "11"
+          "ie": "6"
         },
         "forceAllTransforms": true
       }
