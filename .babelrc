@@ -5,6 +5,12 @@
       "@babel/plugin-transform-for-of", {
         "loose": true
       }
+    ],
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 2
+      }
     ]
   ],
   "presets": [
@@ -14,7 +20,8 @@
           "chrome": "58",
           "ie": "6"
         },
-        "forceAllTransforms": true
+        "forceAllTransforms": true,
+        "useBuiltIns": "entry"
       }
     ]
   ]
