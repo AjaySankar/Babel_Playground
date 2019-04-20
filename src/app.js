@@ -26,7 +26,7 @@ window.onload = () => {
 
   const p = new Promise((resolve, reject) => {
     window.setTimeout(() => {
-      resolve('Time Expired Now');
+      resolve('Timer Expired Ajay Sankar');
     }, 3000);
   })
 

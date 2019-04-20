@@ -11,5 +11,25 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Webpack app'
     })
-  ]
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: [ 'babel-loader' ]
+      },
+    ]
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          "css-loader"
+        ]
+      }
+    ]
+  }
 }
