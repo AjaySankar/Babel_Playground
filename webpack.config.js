@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const UglifyJSPlugin  = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: path.join(__dirname, 'src', 'app.js'),
@@ -10,7 +11,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Webpack app'
-    })
+    }),
+    new UglifyJSPlugin()
   ],
   module: {
     rules: [
@@ -18,17 +20,6 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: [ 'babel-loader' ]
-      },
-    ]
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          "style-loader",
-          "css-loader"
-        ]
       }
     ]
   }
