@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.8/postscribe.min.js"></script>
+    <script>
+      window.onload = () => {
+        window.lastAdRotation = window.lastAdRotation || 0;
+        window.loadAppnexus = () =>{
+          const currTime = new Date().getTime();
+          if(currTime - window.lastAdRotation >= 35000) {
+            window.lastAdRotation = currTime;
+            //Remove any existing script tag
+            const scriptEleId = 'appnexusTag';
+            let ele = document.getElementById(scriptEleId);
+            if(ele){
+              document.body.removeChild(ele);
+            }
+            //Add script
+            ele = document.createElement('script');
+            ele.id = scriptEleId;
+            ele.type= 'text/javascript';
+            ele.src= "http://ib.adnxs.com/ttj?id=15663151&size=728x90";
+            document.body.appendChild(ele);
+          }
+        };
+      };
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
